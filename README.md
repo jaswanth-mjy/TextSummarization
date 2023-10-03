@@ -19,7 +19,7 @@ The application is built using Flask for the backend and HTML/CSS for the fronte
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/Text-Summarization.git
+   git clone https://github.com/jaswanth-mjy/Text-Summarization.git
    cd Text-Summarization
    ```
 
