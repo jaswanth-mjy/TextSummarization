@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Jumbotron styles */
+.jumbotron {
+    background-color: rgb(219, 132, 1);
+}
+
+/* Heading styles */
+.heading {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+/* Subheading styles */
+.subheading {
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+}
+
+/* Button styles */
+.btn-success {
+    background-color: green;
+    color: white;
+}
+
+/* Textarea styles */
+.form-control {
+    margin-top: 10px;
+}
+
+/* Alert styles */
+.alert-info {
+    background-color: lightblue;
+}
+
+.alert-success {
+    background-color: lightgreen;
+}
+
+.alert-warning {
+    background-color: yellow;
+}
+
+.alert-secondary {
+    background-color: lightgray;
+}
+
+/* Summary styles */
+.summary {
+    font-weight: bold;
+}

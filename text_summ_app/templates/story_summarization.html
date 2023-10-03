@@ -1,0 +1,29 @@
+<!-- story_summarization.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 heading">Story Summarization</h1>
+                <p class="lead subheading">Retrieve the best summary</p>
+            </div>
+        </div>
+        <form action="/summarize_story" method="POST"> 
+            <textarea name="input_story" class="form-control" rows="10" placeholder="Enter your story here..." required></textarea><br>
+            <button class="btn btn-success">Summarize Story</button>
+        </form>
+        <div class="alert alert-warning" role="alert">
+            <strong class="summary">Summary:</strong>
+        </div>
+        <p>{{ summary }}</p>
+    </div>
+</body>
+</html>

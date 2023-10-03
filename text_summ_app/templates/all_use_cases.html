@@ -1,0 +1,60 @@
+<!-- all_use_cases.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>All Use Cases</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 heading">Summarization Use Cases</h1>
+            </div>
+        </div>
+        <form action="/summarize_text" method="POST">
+            <div class="form-group">
+                <label for="input_text">Enter Text:</label>
+                <textarea class="form-control" id="input_text" name="input_text" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Summarize Text</button>
+        </form>
+        <form action="/summarize_youtube_transcript" method="POST">
+            <div class="form-group">
+                <label for="input_transcript">Enter YouTube Transcript:</label>
+                <textarea class="form-control" id="input_transcript" name="input_transcript" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Summarize YouTube Transcript</button>
+        </form>
+        <form action="/summarize_story" method="POST">
+            <div class="form-group">
+                <label for="input_story">Enter Story:</label>
+                <textarea class="form-control" id="input_story" name="input_story" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-info">Summarize Story</button>
+        </form>
+        {% if text_summary %}
+        <div class="alert alert-primary subb" role="alert">
+            <h4 class="alert-heading original_title">Text Summary:</h4>
+            <p class="originalTxt">{{ text_summary }}</p>
+        </div>
+        {% endif %}
+        {% if youtube_summary %}
+        <div class="alert alert-success subb" role="alert">
+            <h4 class="alert-heading original_title">YouTube Transcript Summary:</h4>
+            <p class="originalTxt">{{ youtube_summary }}</p>
+        </div>
+        {% endif %}
+        {% if story_summary %}
+        <div class="alert alert-info subb" role="alert">
+            <h4 class="alert-heading original_title">Story Summary:</h4>
+            <p class="originalTxt">{{ story_summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
