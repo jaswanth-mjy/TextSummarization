@@ -32,4 +32,4 @@ def summarize_story():
     return render_template('all_use_cases.html', story_summary=story_summary)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0')
